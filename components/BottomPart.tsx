@@ -8,20 +8,20 @@ export default function BottomPart() {
             <Button textContent="+/-" type="function" />
             <Button textContent="%" type="function" />
             <Button textContent="AC" type="function" />
-            <Button textContent="7" />
-            <Button textContent="8" />
-            <Button textContent="9" />
+            <Button textContent="7" type="digit" />
+            <Button textContent="8" type="digit" />
+            <Button textContent="9" type="digit" />
             <Button textContent="x" type="operator" />
-            <Button textContent="4" />
-            <Button textContent="5" />
-            <Button textContent="6" />
+            <Button textContent="4" type="digit" />
+            <Button textContent="5" type="digit" />
+            <Button textContent="6" type="digit" />
             <Button textContent="-" type="operator" />
-            <Button textContent="1" />
-            <Button textContent="2" />
-            <Button textContent="3" />
+            <Button textContent="1" type="digit" />
+            <Button textContent="2" type="digit" />
+            <Button textContent="3" type="digit" />
             <Button textContent="+" type="operator" />
-            <Button textContent="0" />
-            <Button textContent="." />
+            <Button textContent="0" type="digit" />
+            <Button textContent="." type="decimal" />
             <Button textContent="=" type="equals" />
             <Button textContent="/" type="operator" />
         </View>
