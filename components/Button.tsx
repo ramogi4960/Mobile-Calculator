@@ -1,12 +1,25 @@
 import { Pressable, StyleSheet, Text } from "react-native";
 
 interface TextProps {
-    textContent: string
+    textContent: string;
+    type?: string;
 }
 
-export default function Button({ textContent }: TextProps) {
+export default function Button({ textContent, type }: TextProps) {
+    const types = {
+        digit: '#333639',
+        operator: '#ff9500',
+        function: '#a5a5a5',
+        equals: '#359155ff'
+    }
+
     return (
-        <Pressable style={styles.button}>
+        <Pressable style={[
+            styles.button,
+            {
+                backgroundColor: types[type as keyof typeof types] || types.digit
+            }
+            ]}>
             <Text style={styles.text}>{textContent}</Text>
         </Pressable>
     );
