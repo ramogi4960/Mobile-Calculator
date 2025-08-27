@@ -16,7 +16,7 @@ export default function TopPart({ input }: TopPartProps) {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#1a1a1a',
-        height: '35%',
+        height: '30%',
         width: '100%',
         boxSizing: 'border-box',
         justifyContent: 'flex-end',

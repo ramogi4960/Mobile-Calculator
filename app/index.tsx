@@ -7,15 +7,19 @@ import { InputContext } from "../context API/InputContext";
 
 
 export default function Index() {
-  const [input, setInput] = useState('0');
+  const [ displayValue, setDisplayValue ] = useState<string>('0');
+  const [ previousValue, setPreviousValue ] = useState<string | null>(null);
+  const [ operation, setOperation ] = useState<string | null>(null);
+  const [ waitingForOperand, setWaitingForOperand ] = useState<boolean>(false);
+
 
   return (
-    <InputContext.Provider value={{ input, setInput }}>
-      <SafeAreaView style={styles.container}>
-        <TopPart input={input} />
+    <SafeAreaView style={styles.container} >
+      <InputContext.Provider value={{ displayValue, setDisplayValue, previousValue, setPreviousValue, operation, setOperation, waitingForOperand, setWaitingForOperand }}>
+        <TopPart input={displayValue} />
         <BottomPart />
-      </SafeAreaView>
-    </InputContext.Provider>
+      </InputContext.Provider>
+    </SafeAreaView>
   );
 }
 
@@ -25,5 +29,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#25292e',
     alignItems: 'center',
     justifyContent: 'flex-start',
+    width: '100%',
+    maxWidth: 440,
+    alignSelf: 'center'
   }
 })

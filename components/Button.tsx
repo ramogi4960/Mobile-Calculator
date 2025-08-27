@@ -21,22 +21,12 @@ export default function Button({ textContent, type }: TextProps) {
 
     return (
         <Pressable
-        onPress={() => {
-            switch (type) {
-                case 'digit':
-                    if (inputContext?.input === '0') {
-                        inputContext?.setInput(textContent);
-                    } else {
-                        inputContext?.setInput(inputContext.input + textContent);
-                    }
-                case 'operator':
-
-            }
-        }}
         style={[
             styles.button,
             {
-                backgroundColor: types[type as keyof typeof types] || types.digit
+                backgroundColor: types[type as keyof typeof types] || types.digit,
+                width: textContent === '0' ? (89 * 2) + 5 : 89,
+                borderRadius: textContent === '0' ? 50 : 89,
             }
             ]}>
             <Text style={styles.text}>{textContent}</Text>

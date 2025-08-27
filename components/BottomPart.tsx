@@ -4,10 +4,10 @@ import Button from "./Button";
 export default function BottomPart() {
     return (
         <View style={styles.container}>
-            <Button textContent="C" type="function" />
+            <Button textContent="AC" type="function" />
             <Button textContent="+/-" type="function" />
             <Button textContent="%" type="function" />
-            <Button textContent="AC" type="function" />
+            <Button textContent="/" type="operator" />
             <Button textContent="7" type="digit" />
             <Button textContent="8" type="digit" />
             <Button textContent="9" type="digit" />
@@ -23,7 +23,6 @@ export default function BottomPart() {
             <Button textContent="0" type="digit" />
             <Button textContent="." type="decimal" />
             <Button textContent="=" type="equals" />
-            <Button textContent="/" type="operator" />
         </View>
     )
 }
@@ -31,14 +30,15 @@ export default function BottomPart() {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
         width: '100%',
+        height: '70%',
         boxSizing: 'border-box',
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'center',
         alignItems: 'center',
-        paddingVertical: 7,
-        columnGap: 2
+        alignContent: 'center',
+        columnGap: 1,
+        rowGap: 1,
     }
 })
